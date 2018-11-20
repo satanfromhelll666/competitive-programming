@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int a ,temp1=0,count1=0,count2=0,temp2 = 0;
+        int[] arr = new int[100];
+
+        Scanner s = new Scanner(System.in) ;
+
+        a =s.nextInt();
+
+        for(int i=0;i<a;i++)
+        {
+            arr[i] = s.nextInt();
+        }
+        for(int i=0;i<a;i++)
+        {
+            if(arr[i]%2==0)
+            {
+                temp1 = i ;
+
+                count1++;
+            }
+
+           if(arr[i]%2==1)
+           {
+               temp2 = i ;
+               count2++;
+           }
+        }
+
+
+        if(count1 > count2)
+        {
+            System.out.println(temp2+1);
+        }
+
+        else
+            System.out.println(temp1+1);
+      }
+}
+
+#http://codeforces.com/contest/25/problem/A
